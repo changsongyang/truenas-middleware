@@ -26,7 +26,7 @@ def revoke_api_key(api_key, reason):
     api_key['iterations'] = 0
     api_key['expiry'] = -1
     api_key['revoked_reason'] = reason
-    api_key['stored_key'] = encrypt('') 
+    api_key['stored_key'] = encrypt('')
     api_key['server_key'] = encrypt('')
     api_key['salt'] = encrypt('')
 
