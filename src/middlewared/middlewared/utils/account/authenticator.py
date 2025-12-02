@@ -94,9 +94,9 @@ class UserPamAuthenticator(TrueNASUserPamAuthenticator):
             session_data = {
                 'origin_family': 'AF_INET' if origin.family == AF_INET else 'AF_INET6',
                 'origin': {
-                    'loc_addr': origin.loc_addr,
+                    'loc_addr': str(origin.loc_addr),
                     'loc_port': origin.loc_port,
-                    'rem_addr': origin.rem_addr,
+                    'rem_addr': str(origin.rem_addr),
                     'rem_port': origin.rem_port,
                     'ssl': origin.ssl
                 },
