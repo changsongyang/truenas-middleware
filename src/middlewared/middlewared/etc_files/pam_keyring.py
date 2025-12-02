@@ -48,4 +48,4 @@ def render(service, middleware, render_ctx):
         entry = convert_keys(user, keys)
         keyring_entries.append(entry)
 
-    flush_user_api_keys(pdb_entries)
+    flush_user_api_keys(keyring_entries)
