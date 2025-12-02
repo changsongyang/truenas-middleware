@@ -5,7 +5,7 @@ from middlewared.utils.user_api_key import (
 )
 
 
-def convert_keys(username, keys) -> PamTdbEntry:
+def convert_keys(username, keys) -> UserKeyringEntry:
     user_api_keys = []
 
     for key in keys:
