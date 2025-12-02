@@ -1,4 +1,5 @@
 import truenas_api_key.keyring as api_keyring
+from dataclasses import dataclass
 from truenas_api_key.constants import UserApiKey, PAM_KEYRING_NAME, PAM_API_KEY_NAME
 from middlewared.utils.pwenc import encrypt
 
