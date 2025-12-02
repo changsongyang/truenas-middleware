@@ -1,8 +1,6 @@
 import enum
 from dataclasses import dataclass
 
-from middlewared.utils.account.faillock import FAIL_INTERVAL, MAX_FAILURE, UNLOCK_TIME
-
 
 class PAMModule(enum.StrEnum):
     DENY = 'pam_deny.so'
