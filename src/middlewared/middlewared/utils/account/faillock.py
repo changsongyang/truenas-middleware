@@ -133,7 +133,7 @@ def reset_tally(username) -> None:
     if (user_keyring := __get_user_keyring(username)) is None:
         return
 
-    if (failure_keyring := __get_failure_keyring(username)) is not None:
+    if (failure_keyring := __get_failure_keyring(user_keyring)) is not None:
         # Wipe all failed login attempts from log
         failure_keyring.clear()
 
