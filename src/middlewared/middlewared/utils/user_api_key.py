@@ -48,4 +48,4 @@ def flush_user_api_keys(api_key_entries: list[UserKeyringEntry]) -> None:
         if entry.key.description in usernames:
             continue
 
-        api_keyring.clear_user_keyring(item.key.description)
+        api_keyring.clear_user_keyring(entry.key.description)
