@@ -41,11 +41,11 @@ def flush_user_api_keys(api_key_entries: list[UserKeyringEntry]) -> None:
     # remove API keys for any user that isn't in our users list
     pam_keyring = api_keyring.get_pam_keyring()
     for entry in pam_keyring.iter_keyring_contents(unlink_expired=True, unlink_revoked=True):
-        if item.key.key_type != 'keyring':
+        if entry.key.key_type != 'keyring':
             continue
 
         # the description for entries in pam keyring is the username
-        if item.key.description in usernames:
+        if entry.key.description in usernames:
             continue
 
         api_keyring.clear_user_keyring(item.key.description)
