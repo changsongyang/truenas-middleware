@@ -8,7 +8,10 @@
 
 <%
     from middlewared.utils.directoryservices.constants import DSType
-    from middlewared.utils.pam import TTY_AUDIT_LINE, STANDALONE_SESSION, AD_SESSION, SSS_SESSION
+    from middlewared.utils.pam import (
+        TTY_AUDIT_LINE, STANDALONE_SESSION, AD_SESSION, SSS_SESSION,
+        TRUENAS_SESSION_LIMIT, TRUENAS_SESSION_NO_LIMIT
+    )
 
     tty_audit_line = None
 
